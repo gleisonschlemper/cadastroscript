@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../cadastroScript/style/header.css">
+    <link rel="stylesheet" href="../cadastroScript/style/bootstrap.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            box-sizing: border-box;
+        }
+        body{
+            max-width: 100vw;
+        }
+        abbr{
+            border: none;
+            text-decoration: none;
+        }
+    </style>
+
+    
+    <title>Cadastro</title>
+</head>
+<body>
+<div id="modal" class="modal">
+    <div class="registration">
+       <label for="">
+            Nomes:
+            <input type="text" id="nome">
+       </label>
+
+       <label for="">
+            Email:
+            <input type="email" id="email">
+       </label>
+
+       <label for="">
+            Senha:
+            <input type="password" id="senha">
+       </label>
+
+       <div class="result">
+            <input type="submit" class="pegarValor" value="enviar" onclick="pegarValor()" >
+
+            <button onclick="sair()">
+                sair
+            </button>
+       </div>
+    </div>
+</div>
+
+<header>
+    <a href=""> <img src="../cadastroScript/asides/logo.png" alt="" srcset="" class="logo"></a>
+    
+    <div id="section_watch">
+
+    </div>
+
+
+    <button type="button" class="btn btn-dark botao" onclick="add()">Add</button>
+</header>
+<!--  -->
+<main>
+    <table class="section_table" width="100%" border="1">
+        <tr>
+            <th><abbr title="">Nomes</abbr>  </th>
+            <th><abbr title="">Email</abbr> </th>
+            <th><abbr title="">Senhas</abbr> </th>
+            <th><abbr title="">ações</abbr> </th>
+        </tr>
+    </table>
+
+    <div class="acharDados">
+      &quot;Digite email procurado:&quot; 
+      <!-- $quot == "" -->
+        <input type="email" placeholder="Informe email" onchange="procura(this.value)">
+    </div>
+</main>
+
+<script src="../cadastroScript/scripts/script.js"></script>
+<script src="../cadastroScript/scripts/login.js"></script>
+<script src="../cadastroScript/scripts/watch.js"></script>
+</body>
+</html>
